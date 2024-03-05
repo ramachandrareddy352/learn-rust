@@ -17,6 +17,28 @@ fn main() {
     if !t || t {
         println!("success");
     }
+
+    // 4
+    let _v: () = ();
+    let v = (2, 3);
+    assert_eq!(_v, implicitly_ret_unit());
+
+    println!("Success!");
+
+    // 6
+    let unit: () = ();
+    assert!(size_of_val(&unit) == 0);
+    // char - 4 bytes
+    // bool - 1 byte
+}
+
+fn implicitly_ret_unit() {
+    println!("I will return a ()");
+}
+
+// Don't use this one
+fn explicitly_ret_unit() -> () {
+    println!("I will return a ()");
 }
 
 fn print_char(c: char) {
