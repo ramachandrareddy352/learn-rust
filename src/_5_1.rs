@@ -41,11 +41,47 @@ fn main() {
     // 7
     let x = Box::new(5);
     let mut y = Box::new(1); // update this line, don't change other lines!
-    *y = 4;
+    *y = 10;
     println!("{}", y); // pointer
     println!("{}", *y); // value of pointer
     assert_eq!(*x, 5);
     println!("Success!");
+
+    // partial example
+    #[derive(Debug)]
+    struct Person {
+        name: String,
+        age: Box<u8>,
+    }
+
+    let person: Person = Person {
+        name: String::from("Alice"),
+        age: Box::new(20),
+    };
+
+    // `name` is moved out of person, but `age` is referenced
+    let Person { name, ref age } = person;
+
+    println!("The person's age is {}", age);
+    println!("The person's name is {}", name);
+
+    // Error! borrow of partially moved value: `person` partial move occurs
+    //println!("The person struct is {:?}", person);
+    // `person` cannot be used but `person.age` can be used as it is not moved
+    println!("The person's age from person struct is {}", person.age);
+
+    // 8
+    let t = (String::from("hello"), String::from("world"));
+    println!("{:?}", t); // print entire tuple
+    let _s = t.0; // first element of tuple ownership is changed
+                  // Modify this line only, don't use `_s`
+    println!("{:?}", t.1);
+
+    // 9
+    let t = (String::from("hello"), String::from("world"));
+    let (s1, s2) = (t.0.clone(), t.1.clone());
+    // let (s1,s2) = t.clone()
+    println!("{:?}, {:?}, {:?}", s1, s2, t); // -> "hello", "world", ("hello", "world")
 }
 
 fn print_str(s: String) {
