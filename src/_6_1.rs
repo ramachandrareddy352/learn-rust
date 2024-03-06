@@ -1,4 +1,3 @@
-use std::mem::utf8_slice;
 fn main() {
     // example
     let s = String::from("hello world");
@@ -116,7 +115,7 @@ fn main() {
 
     // 13
     let s = "The 🚀 goes to the 🌑!";
-    let rocket = utf8_slice::slice(s, 4, 5);
+    let rocket = &s[4..5];
 }
 
 fn greeting(s: String) {
