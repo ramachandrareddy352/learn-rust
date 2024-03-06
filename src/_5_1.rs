@@ -81,7 +81,7 @@ fn main() {
     let t = (String::from("hello"), String::from("world"));
     let (s1, s2) = (t.0.clone(), t.1.clone());
     // let (s1,s2) = t.clone()
-    println!("{:?}, {:?}, {:?}", s1, s2, t); // -> "hello", "world", ("hello", "world")
+    println!("{}, {}, {:?}", s1, s2, t); // -> "hello", "world", ("hello", "world")
 }
 
 fn print_str(s: String) {
