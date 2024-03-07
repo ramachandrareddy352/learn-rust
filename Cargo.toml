@@ -5,7 +5,7 @@ version = "0.1.0"
 
 [[bin]]
 name = "learning-rust"
-path = "src/_6_3.rs"
+path = "src/7/_7_1.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
