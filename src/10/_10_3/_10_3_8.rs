@@ -28,6 +28,8 @@ fn main() {
         x: Unit(1),
         y: Unit(3),
     };
-
     pair.cmp_display();
+
+    let pair2 = Pair::new(2.2, 3.3);
+    pair2.cmp_display();
 }
