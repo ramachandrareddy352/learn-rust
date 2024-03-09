@@ -3,5 +3,73 @@
 version = 3
 
 [[package]]
+checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
+name = "cfg-if"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+version = "1.0.0"
+
+[[package]]
+checksum = "190092ea657667030ac6a35e305e62fc4dd69fd98ac98631e5d3a2b1575a12b5"
+dependencies = [
+  "cfg-if",
+  "libc",
+  "wasi",
+]
+name = "getrandom"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+version = "0.2.12"
+
+[[package]]
+dependencies = [
+  "rand",
+]
 name = "learn-rust"
 version = "0.1.0"
+
+[[package]]
+checksum = "9c198f91728a82281a64e1f4f9eeb25d82cb32a5de251c6bd1b5154d63a8e7bd"
+name = "libc"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+version = "0.2.153"
+
+[[package]]
+checksum = "5b40af805b3121feab8a3c29f04d8ad262fa8e0561883e7653e024ae4479e6de"
+name = "ppv-lite86"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+version = "0.2.17"
+
+[[package]]
+checksum = "34af8d1a0e25924bc5b7c43c079c942339d8f0a8b57c39049bef581b46327404"
+dependencies = [
+  "libc",
+  "rand_chacha",
+  "rand_core",
+]
+name = "rand"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+version = "0.8.5"
+
+[[package]]
+checksum = "e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88"
+dependencies = [
+  "ppv-lite86",
+  "rand_core",
+]
+name = "rand_chacha"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+version = "0.3.1"
+
+[[package]]
+checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
+dependencies = [
+  "getrandom",
+]
+name = "rand_core"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+version = "0.6.4"
+
+[[package]]
+checksum = "9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423"
+name = "wasi"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+version = "0.11.0+wasi-snapshot-preview1"

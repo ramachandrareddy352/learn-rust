@@ -1,3 +1,4 @@
+workspace = { members = ["hello-package"] }
 [package]
 edition = "2021"
 name = "learn-rust"
@@ -5,8 +6,9 @@ version = "0.1.0"
 
 [[bin]]
 name = "learning-rust"
-path = "src/12/_12_2.rs"
+path = "src/13/_13_2/_13_2_5.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+rand = "0.8.5"
